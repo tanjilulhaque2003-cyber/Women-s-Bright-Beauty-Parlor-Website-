@@ -1,0 +1,30 @@
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="logoTitle">
+  <title id="logoTitle">Women's Bright Beauty Parlor and Gym</title>
+  <defs>
+    <linearGradient id="wbBloom" x1="10" y1="6" x2="54" y2="58" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F472B6"/>
+      <stop offset="0.55" stop-color="#EC4899"/>
+      <stop offset="1" stop-color="#8B5CF6"/>
+    </linearGradient>
+    <linearGradient id="wbCore" x1="24" y1="24" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FDF2F8"/>
+      <stop offset="1" stop-color="#FBCFE8"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Bloom: five petals, radial. Beauty + wellness, reads clean at 16px. -->
+  <g fill="url(#wbBloom)">
+    <ellipse cx="32" cy="19" rx="5.4" ry="12.6" opacity="0.95"/>
+    <ellipse cx="32" cy="19" rx="5.4" ry="12.6" opacity="0.88" transform="rotate(72 32 32)"/>
+    <ellipse cx="32" cy="19" rx="5.4" ry="12.6" opacity="0.88" transform="rotate(144 32 32)"/>
+    <ellipse cx="32" cy="19" rx="5.4" ry="12.6" opacity="0.88" transform="rotate(216 32 32)"/>
+    <ellipse cx="32" cy="19" rx="5.4" ry="12.6" opacity="0.88" transform="rotate(288 32 32)"/>
+  </g>
+
+  <!-- Core -->
+  <circle cx="32" cy="32" r="6.4" fill="url(#wbCore)"/>
+  <circle cx="32" cy="32" r="2.6" fill="#EC4899" opacity="0.5"/>
+
+  <!-- "Bright": a small sparkle, top-right -->
+  <path d="M50 10.5c0.35 3.1 1.05 3.8 4.15 4.15-3.1 0.35-3.8 1.05-4.15 4.15-0.35-3.1-1.05-3.8-4.15-4.15 3.1-0.35 3.8-1.05 4.15-4.15z" fill="#8B5CF6"/>
+</svg>
