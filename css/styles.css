@@ -4,12 +4,11 @@
    ========================================================= */
 
 :root {
-  /* Render the intended light design even when a phone/browser forces dark
-     mode — without this, "force dark" darkens the pink background and the
-     maroon headings become nearly invisible. */
-  color-scheme: only light;
+  /* Declaring color-scheme (instead of locking to light) tells the browser we
+     handle theming ourselves, so it won't apply its own "force dark". */
+  color-scheme: light;
 
-  /* Colour tokens */
+  /* Colour tokens — light theme (default) */
   --primary:        #EC4899;
   --primary-dark:   #DB2777;
   --on-primary:     #FFFFFF;
@@ -24,6 +23,7 @@
   --border:         #FBCFE8;
   --dark:           #2E1122;
   --dark-soft:      #45203A;
+  --nav-bg:         rgba(253,242,248,.82);
 
   /* Type */
   --font-head: "Playfair Display", Georgia, "Times New Roman", serif;
@@ -46,6 +46,33 @@
   --ease: cubic-bezier(.22,.61,.36,1);
   --container: 1180px;
 }
+
+/* ---------------- Dark theme ----------------
+   Not an inversion — a deep plum evening version of the same brand. Pink and
+   lavender stay the identity; backgrounds go dark, text goes light. */
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --primary:        #F472B6;   /* a touch brighter so it sings on dark */
+  --primary-dark:   #EC4899;
+  --secondary:      #F9A8D4;
+  --accent:         #A78BFA;
+  --bg:             #180A12;
+  --surface:        #271420;
+  --heading:        #FCE7F3;
+  --body:           #DBB8CB;
+  --muted:          #201019;
+  --muted-fg:       #B992A6;
+  --border:         #43273A;
+  --dark:           #34182A;   /* gym/footer sit a shade above the page, so they still read as panels */
+  --dark-soft:      #4A2740;
+  --nav-bg:         rgba(24,10,18,.85);
+  --sh-1: 0 1px 2px rgba(0,0,0,.40), 0 2px 8px rgba(0,0,0,.35);
+  --sh-2: 0 2px 6px rgba(0,0,0,.42), 0 8px 24px rgba(0,0,0,.42);
+  --sh-3: 0 6px 16px rgba(0,0,0,.48), 0 18px 48px rgba(0,0,0,.52);
+}
+
+/* Ease the switch between themes (skipped for reduced-motion below) */
+body { transition: background-color var(--dur) var(--ease), color var(--dur) var(--ease); }
 
 /* ---------------- Base ---------------- */
 *, *::before, *::after { box-sizing: border-box; }
@@ -84,7 +111,7 @@ ul { margin: 0; padding: 0; list-style: none; }
   letter-spacing: .16em; text-transform: uppercase; color: var(--primary); margin-bottom: var(--s-1);
 }
 .section { padding-block: clamp(var(--s-6), 9vw, var(--s-7)); }
-.section--tint { background: linear-gradient(180deg, #fff 0%, var(--muted) 100%); }
+.section--tint { background: linear-gradient(180deg, var(--surface) 0%, var(--muted) 100%); }
 .section__head { max-width: 62ch; margin-bottom: var(--s-5); }
 .section__lede { font-size: 1.075rem; color: var(--muted-fg); }
 
@@ -116,13 +143,14 @@ ul { margin: 0; padding: 0; list-style: none; }
 /* ---------------- Nav ---------------- */
 .nav {
   position: sticky; top: 0; z-index: 100;
-  background: rgba(253,242,248,.82);
+  background: var(--nav-bg);
   backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid transparent;
   transition: border-color var(--dur) var(--ease), box-shadow var(--dur) var(--ease);
 }
 .nav.is-stuck { border-bottom-color: var(--border); box-shadow: var(--sh-1); }
 .nav__inner { display: flex; align-items: center; justify-content: space-between; gap: var(--s-2); min-height: 72px; }
+.nav__cluster { display: flex; align-items: center; gap: var(--s-3); }
 
 .brand { display: flex; align-items: center; gap: .7rem; min-height: 44px; text-decoration: none; }
 .brand__mark { width: 44px; height: 44px; transition: transform 300ms var(--ease); }
@@ -144,6 +172,23 @@ ul { margin: 0; padding: 0; list-style: none; }
 .nav__menu a:not(.btn):hover::after,
 .nav__menu a:not(.btn).is-active::after { transform: scaleX(1); transform-origin: left; }
 .nav__menu a:not(.btn).is-active { color: var(--primary); }
+
+/* Theme toggle */
+.nav__theme {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 44px; height: 44px; flex: none;
+  background: transparent; color: var(--heading);
+  border: 1px solid var(--border); border-radius: var(--r-full);
+  cursor: pointer;
+  transition: color var(--dur) var(--ease), border-color var(--dur) var(--ease),
+              background-color var(--dur) var(--ease), transform var(--dur) var(--ease);
+}
+.nav__theme:hover { color: var(--primary); border-color: var(--primary); transform: translateY(-1px); }
+.nav__theme .ico { width: 20px; height: 20px; }
+/* Show the icon for the theme you'd switch TO */
+.ico--sun { display: none; }
+:root[data-theme="dark"] .ico--moon { display: none; }
+:root[data-theme="dark"] .ico--sun { display: block; }
 
 .nav__toggle {
   display: none; width: 48px; height: 48px; align-items: center; justify-content: center;
@@ -421,6 +466,7 @@ ul { margin: 0; padding: 0; list-style: none; }
 
 @media (max-width: 780px) {
   .nav__toggle { display: flex; }
+  .nav__cluster { gap: .35rem; } /* tighten icon spacing so the brand keeps its room */
   .nav__menu {
     position: fixed; inset: 72px 0 auto 0;
     flex-direction: column; align-items: stretch; gap: 0;
