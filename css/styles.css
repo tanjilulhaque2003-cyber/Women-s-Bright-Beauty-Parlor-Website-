@@ -4,6 +4,11 @@
    ========================================================= */
 
 :root {
+  /* Render the intended light design even when a phone/browser forces dark
+     mode — without this, "force dark" darkens the pink background and the
+     maroon headings become nearly invisible. */
+  color-scheme: only light;
+
   /* Colour tokens */
   --primary:        #EC4899;
   --primary-dark:   #DB2777;
