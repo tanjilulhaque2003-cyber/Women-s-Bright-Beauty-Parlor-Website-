@@ -1,9 +1,14 @@
 /* =========================================================
-   Women's Bright Beauty Parlor and Gym
+   Women's Bright Beauty Parlour and Gym
    Palette: soft rose + lavender  |  Type: Playfair Display + Inter
    ========================================================= */
 
 :root {
+  /* Render the intended light design even when a phone/browser forces dark
+     mode — without this, "force dark" darkens the pink background and the
+     maroon headings become nearly invisible. */
+  color-scheme: only light;
+
   /* Colour tokens */
   --primary:        #EC4899;
   --primary-dark:   #DB2777;
@@ -120,8 +125,8 @@ ul { margin: 0; padding: 0; list-style: none; }
 .nav__inner { display: flex; align-items: center; justify-content: space-between; gap: var(--s-2); min-height: 72px; }
 
 .brand { display: flex; align-items: center; gap: .7rem; min-height: 44px; text-decoration: none; }
-.brand__mark { width: 40px; height: 40px; transition: transform 400ms var(--ease); }
-.brand:hover .brand__mark { transform: rotate(72deg); }
+.brand__mark { width: 44px; height: 44px; transition: transform 300ms var(--ease); }
+.brand:hover .brand__mark { transform: scale(1.08); }
 .brand__text { display: flex; flex-direction: column; line-height: 1.15; }
 .brand__name { font-family: var(--font-head); font-size: 1.075rem; font-weight: 600; color: var(--heading); }
 .brand__sub { font-size: .68rem; letter-spacing: .1em; text-transform: uppercase; color: var(--muted-fg); }
@@ -370,8 +375,8 @@ ul { margin: 0; padding: 0; list-style: none; }
 /* ---------------- Footer ---------------- */
 .foot { background: var(--dark); color: rgba(255,255,255,.6); padding-block: var(--s-5); }
 .foot__inner { display: flex; flex-direction: column; gap: var(--s-2); align-items: center; text-align: center; }
-.foot__brand { display: flex; align-items: center; gap: .7rem; }
-.foot__name { font-family: var(--font-head); font-size: 1.05rem; color: #fff; margin: 0; }
+.foot__brand { display: flex; flex-direction: column; align-items: center; gap: .4rem; }
+.foot__logo { width: 200px; height: auto; }
 .foot__tag { font-size: .82rem; font-style: italic; color: var(--secondary); margin: 0; }
 .foot__meta, .foot__copy { font-size: .85rem; margin: 0; }
 .foot__meta a {
