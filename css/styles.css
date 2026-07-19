@@ -260,22 +260,19 @@ ul { margin: 0; padding: 0; list-style: none; }
 
 /* ---------------- Services ---------------- */
 .svc__chips {
-  display: flex; gap: .55rem; overflow-x: auto; padding-bottom: var(--s-2); margin-bottom: var(--s-4);
-  scrollbar-width: thin; -webkit-overflow-scrolling: touch;
+  display: flex; flex-wrap: wrap; justify-content: center;
+  gap: .5rem; margin-bottom: var(--s-5);
 }
-.svc__chips::-webkit-scrollbar { height: 4px; }
-.svc__chips::-webkit-scrollbar-thumb { background: var(--border); border-radius: var(--r-full); }
 .chip {
-  flex: none; min-height: 44px; padding: .55rem 1.15rem;
+  min-height: 44px; padding: .5rem 1.2rem;
   font-family: var(--font-body); font-size: .9rem; font-weight: 500; white-space: nowrap;
-  color: var(--body); background: var(--surface);
+  color: var(--muted-fg); background: transparent;
   border: 1px solid var(--border); border-radius: var(--r-full);
-  cursor: pointer; box-shadow: var(--sh-1);
-  transition: background-color var(--dur) var(--ease), color var(--dur) var(--ease),
-              border-color var(--dur) var(--ease), transform var(--dur) var(--ease);
+  cursor: pointer;
+  transition: background-color var(--dur) var(--ease), color var(--dur) var(--ease), border-color var(--dur) var(--ease);
 }
-.chip:hover { border-color: var(--primary); color: var(--primary); transform: translateY(-1px); }
-.chip.is-active { background: var(--primary); color: #fff; border-color: var(--primary); box-shadow: var(--sh-primary); }
+.chip:hover { color: var(--primary); border-color: var(--primary); background: var(--muted); }
+.chip.is-active { background: var(--primary); color: var(--on-primary); border-color: var(--primary); box-shadow: var(--sh-primary); }
 
 .panel {
   background: var(--surface); border: 1px solid var(--border);
