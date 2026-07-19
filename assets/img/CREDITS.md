@@ -1,7 +1,7 @@
 # Image credits — TEMPORARY STOCK PHOTOS
 
-**These are placeholder stock photos, not photos of Women's Bright Beauty Parlor and Gym.**
-Replace every one of them with real photos of the parlor and of her own work when available.
+**These are placeholder stock photos, not photos of Women's Bright Beauty Parlour and Gym.**
+Replace every one of them with real photos of the parlour and of her own work when available.
 The interior shots in particular show *somebody else's salon* — those are the most important
 to replace, because visitors will reasonably assume they are the actual premises.
 
