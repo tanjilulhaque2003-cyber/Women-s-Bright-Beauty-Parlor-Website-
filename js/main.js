@@ -44,6 +44,25 @@
     onScroll();
   }
 
+  /* ---------- Theme toggle (light / dark) ---------- */
+  var themeBtn = document.getElementById('themeToggle');
+  if (themeBtn) {
+    var themeMeta = document.querySelector('meta[name="theme-color"]');
+    var syncTheme = function () {
+      var dark = document.documentElement.getAttribute('data-theme') === 'dark';
+      themeBtn.setAttribute('aria-pressed', String(dark));
+      themeBtn.setAttribute('aria-label', dark ? 'Switch to light theme' : 'Switch to dark theme');
+      if (themeMeta) themeMeta.setAttribute('content', dark ? '#180A12' : '#EC4899');
+    };
+    syncTheme(); // the initial theme was set by the inline <head> script
+    themeBtn.addEventListener('click', function () {
+      var next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      try { localStorage.setItem('theme', next); } catch (e) {}
+      syncTheme();
+    });
+  }
+
   /* ---------- Services: category filter (ARIA tabs) ---------- */
   var svc = document.getElementById('svc');
   if (svc) {
