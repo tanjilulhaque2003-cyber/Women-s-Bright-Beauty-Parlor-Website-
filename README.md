@@ -1,6 +1,6 @@
-# Women's Bright Beauty Parlor and Gym
+# Women's Bright Beauty Parlour and Gym
 
-Website for **Women's Bright Beauty Parlor and Gym** — a women-only beauty parlor and gym
+Website for **Women's Bright Beauty Parlour and Gym** — a women-only beauty parlour and gym
 in Shewrapara, Mirpur, Dhaka. *Where beauty meets care.*
 
 A single-page site: services and prices, bridal packages, the ladies' gym, a gallery, and
@@ -34,7 +34,7 @@ assets/img/         photos (+ CREDITS.md documenting each one)
   are CSS transforms + IntersectionObserver, not a heavy JS library. Everything still works
   with JavaScript disabled — content is visible by default.
 - **Photos are temporary licensed stock** (Unsplash). See [`assets/img/CREDITS.md`](assets/img/CREDITS.md).
-  Replace them with real photos of the parlor and its work — the gym photo especially.
+  Replace them with real photos of the parlour and its work — the gym photo especially.
 
 ## To do
 

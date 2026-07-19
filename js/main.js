@@ -1,4 +1,4 @@
-/* Women's Bright Beauty Parlor and Gym — interactions
+/* Women's Bright Beauty Parlour and Gym — interactions
    Vanilla, no dependencies. Every feature degrades gracefully without JS. */
 (function () {
   'use strict';
