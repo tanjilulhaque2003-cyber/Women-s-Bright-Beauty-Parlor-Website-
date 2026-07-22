@@ -392,6 +392,45 @@ ul { margin: 0; padding: 0; list-style: none; }
 /* ---------------- Gallery ---------------- */
 .grid-gal { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--s-2); }
 
+/* ---------------- Bangla menu ---------------- */
+.bn { font-family: "Noto Sans Bengali", var(--font-body); }
+#menu-bn .h2 { line-height: 1.4; }
+.menu-bn__en {
+  display: block; margin-top: .4rem;
+  font-family: var(--font-body); font-size: .9rem; color: var(--muted-fg);
+}
+.menu-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--s-3); }
+.menu-card {
+  display: block; padding: 0; margin: 0;
+  border: 1px solid var(--border); border-radius: var(--r-2); overflow: hidden;
+  background: var(--surface); box-shadow: var(--sh-1); cursor: zoom-in;
+  transition: transform var(--dur) var(--ease), box-shadow var(--dur) var(--ease);
+}
+.menu-card img { width: 100%; height: auto; display: block; }
+.menu-card:hover, .menu-card:focus-visible { transform: translateY(-4px); box-shadow: var(--sh-3); }
+@media (max-width: 900px) { .menu-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .menu-grid { grid-template-columns: 1fr; max-width: 440px; margin-inline: auto; } }
+
+/* Lightbox */
+.lightbox {
+  position: fixed; inset: 0; z-index: 200; display: none;
+  align-items: center; justify-content: center; padding: var(--s-3);
+  background: rgba(0,0,0,.86);
+}
+.lightbox.is-open { display: flex; }
+.lightbox__img {
+  max-width: min(100%, 860px); max-height: 92vh;
+  border-radius: var(--r-1); box-shadow: var(--sh-3);
+}
+.lightbox__close {
+  position: absolute; top: 14px; right: 16px; width: 44px; height: 44px;
+  display: grid; place-items: center;
+  border: 0; border-radius: 50%; background: rgba(255,255,255,.16); color: #fff;
+  font-size: 1.7rem; line-height: 1; cursor: pointer;
+  transition: background-color var(--dur) var(--ease);
+}
+.lightbox__close:hover { background: rgba(255,255,255,.30); }
+
 /* ---------------- Contact ---------------- */
 .contact { display: grid; grid-template-columns: 1.1fr .9fr; gap: clamp(var(--s-3), 4vw, var(--s-5)); }
 .contact__list li { display: flex; gap: var(--s-2); padding: var(--s-2) 0; border-bottom: 1px solid var(--border); }
