@@ -18,6 +18,16 @@ with no attribution required (credit is appreciated, so it is recorded here).
 | `interior-wide.webp` | Gallery — interior (wide) | `photo-1706629505300-168aa1604912` |
 | `mehndi.webp` | Gallery — mehndi | `photo-1623217509141-6f735087b50c` |
 | `gym.webp` | Gallery — gym (equipment) | `photo-1758448756350-3d0eec02ba37` |
+| `party.webp` | Services — Party Make-up | `photo-1709477542170-f11ee7d471a0` |
+| `fair-polish.webp` | Services — Fair Polish | `photo-1555820585-c5ae44394b79` |
+| `brows.webp` | Services — Eyebrows & Others | `photo-1674049406179-d7bf2c263e71` |
+| `special-facial.webp` | Services — Special Facial | `photo-1648203276014-20f97ba1f817` |
+| `straightening.webp` | Services — Straightening & Styling | `photo-1673731094078-9357994bc9b3` |
+| `haircut.webp` | Services — Hair Cut | `photo-1647462741268-e5724e5886c0` |
+| `handfoot.webp` | Services — Hand & Foot Care | `photo-1659391542239-9648f307c0b1` |
+| `massage.webp` | Services — Body Massage | `photo-1639162906614-0603b0ae95fd` |
+
+*(The Services categories also reuse `facial.webp` and `hair-colour.webp` from the gallery.)*
 
 ### Choices worth keeping in mind when you replace these
 
