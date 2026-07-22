@@ -286,6 +286,10 @@ ul { margin: 0; padding: 0; list-style: none; }
 .panel.is-entering { animation: panelIn 320ms var(--ease) both; }
 @keyframes panelIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
 
+.panel__photo {
+  width: 100%; height: clamp(150px, 22vw, 210px); object-fit: cover;
+  border-radius: var(--r-2); margin-bottom: var(--s-3); background: var(--muted);
+}
 .panel__title { font-size: clamp(1.4rem, 3vw, 1.85rem); margin-bottom: var(--s-3); }
 .panel__sub {
   font-family: var(--font-body); font-size: .75rem; font-weight: 700;
