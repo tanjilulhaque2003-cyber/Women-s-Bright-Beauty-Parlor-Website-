@@ -399,6 +399,9 @@ ul { margin: 0; padding: 0; list-style: none; }
   display: block; margin-top: .4rem;
   font-family: var(--font-body); font-size: .9rem; color: var(--muted-fg);
 }
+.menu-sub { text-align: center; margin: var(--s-6) 0 var(--s-4); }
+.menu-sub__title { font-size: clamp(1.4rem, 3.5vw, 2rem); color: var(--heading); margin: 0 0 .25rem; }
+.menu-sub__note { color: var(--muted-fg); font-size: .95rem; margin: 0; }
 .menu-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--s-3); }
 .menu-card {
   display: block; padding: 0; margin: 0;
