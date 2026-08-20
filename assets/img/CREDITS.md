@@ -29,6 +29,13 @@ with no attribution required (credit is appreciated, so it is recorded here).
 
 *(The Services categories also reuse `facial.webp` and `hair-colour.webp` from the gallery.)*
 
+## The owner's certificates (`assets/certs/`)
+
+Real professional certificates of the owner, **Nasrin Akter** — not stock. Shown in the
+About section. On the Bangladesh Technical Education Board certificate (`cert-bteb.webp`)
+the SL number, registration number and parents' names were **whited-out for privacy** (matched
+to the paper colour) before publishing; the qualification, her name and photo are kept.
+
 ## Not stock — the owner's own posters
 
 The images in `assets/menu/` are the parlour's **own Bangla price posters** (supplied by the owner),
