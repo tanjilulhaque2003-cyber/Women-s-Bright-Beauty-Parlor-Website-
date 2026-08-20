@@ -154,6 +154,32 @@
     sections.forEach(function (s) { spy.observe(s); });
   }
 
+  /* ---------- Bangla menu lightbox ---------- */
+  var lb = document.getElementById('lightbox');
+  if (lb) {
+    var lbImg = document.getElementById('lightboxImg');
+    var lbClose = document.getElementById('lightboxClose');
+    var openLb = function (src, alt) {
+      lbImg.src = src; lbImg.alt = alt || '';
+      lb.hidden = false; lb.classList.add('is-open');
+      document.body.style.overflow = 'hidden';
+    };
+    var closeLb = function () {
+      lb.classList.remove('is-open'); lb.hidden = true;
+      lbImg.src = ''; document.body.style.overflow = '';
+    };
+    Array.prototype.forEach.call(document.querySelectorAll('.menu-card'), function (card) {
+      card.addEventListener('click', function () {
+        var img = card.querySelector('img');
+        openLb(card.getAttribute('data-full'), img ? img.alt : '');
+      });
+    });
+    lb.addEventListener('click', function (e) { if (e.target === lb || e.target === lbClose) closeLb(); });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && lb.classList.contains('is-open')) closeLb();
+    });
+  }
+
   /* ---------- Footer year ---------- */
   var yr = document.getElementById('yr');
   if (yr) yr.textContent = String(new Date().getFullYear());

@@ -18,6 +18,29 @@ with no attribution required (credit is appreciated, so it is recorded here).
 | `interior-wide.webp` | Gallery — interior (wide) | `photo-1706629505300-168aa1604912` |
 | `mehndi.webp` | Gallery — mehndi | `photo-1623217509141-6f735087b50c` |
 | `gym.webp` | Gallery — gym (equipment) | `photo-1758448756350-3d0eec02ba37` |
+| `party.webp` | Services — Party Make-up | `photo-1709477542170-f11ee7d471a0` |
+| `fair-polish.webp` | Services — Fair Polish | `photo-1555820585-c5ae44394b79` |
+| `brows.webp` | Services — Eyebrows & Others | `photo-1674049406179-d7bf2c263e71` |
+| `special-facial.webp` | Services — Special Facial | `photo-1648203276014-20f97ba1f817` |
+| `straightening.webp` | Services — Straightening & Styling | `photo-1712641967071-b011e33a70f4` |
+| `haircut.webp` | Services — Hair Cut | `photo-1628292180187-3bac5c5b3cb6` |
+| `handfoot.webp` | Services — Hand & Foot Care | `photo-1659391542239-9648f307c0b1` |
+| `massage.webp` | Services — Body Massage | `photo-1639162906614-0603b0ae95fd` |
+
+*(The Services categories also reuse `facial.webp` and `hair-colour.webp` from the gallery.)*
+
+## The owner's certificates (`assets/certs/`)
+
+Real professional certificates of the owner, **Nasrin Akter** — not stock. Shown in the
+About section. On the Bangladesh Technical Education Board certificate (`cert-bteb.webp`)
+the SL number, registration number and parents' names were **whited-out for privacy** (matched
+to the paper colour) before publishing; the qualification, her name and photo are kept.
+
+## Not stock — the owner's own posters
+
+The images in `assets/menu/` are the parlour's **own Bangla price posters** (supplied by the owner),
+not stock. They are the real menu and do **not** need replacing. Source files were the owner's
+WhatsApp images; optimised to WebP at 1000px wide.
 
 ### Choices worth keeping in mind when you replace these
 
